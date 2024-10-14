@@ -5,6 +5,9 @@ git clone https://github.com/maurosoria/dirsearch.git
 cd dirsearch
 
 дальше
+pip install mysql-connector-python
+
+дальше
 ./dirsearch.py -u {link} -w ./db/dicc.txt
 
 тут нам нужно /composer.json
