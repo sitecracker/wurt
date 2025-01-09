@@ -1,0 +1,14 @@
+send file to wireshark 
+
+after find there file with id: 10476
+click to follow and http stream
+
+after go to base64 decoder and enter there this:
+UlBGUHtxcTU0NXNvczEyc3E2MDhxbm44cDIwMXM1MHM5NXA4NTIwb3JwOXM3NDRuMzU3M28xcXAwb3A1M3ByMDE5NzI2fQ==
+we get next thing:
+RPFP{qq545sos12sq608qnn8p201s50s95p8520orp9s744n3573o1qp0op53pr019726}
+
+after getting this go to rot13 decoder and enter it in there
+
+and we get our flag 
+ECSC{dd545fbf12fd608daa8c201f50f95c8520bec9f744a3573b1dc0bc53ce019726}
